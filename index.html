@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Editor</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <p class="head">Photo Editor</p>
+
+      <input type="file" accept="image/*" id="upload" onchange="uplo()" />
+
+      <!-- main image editing  -->
+
+      <button onclick="create()">SAVE</button>
+    </div>
+
+    <canvas id="load"
+      >error<img id="im" src="" /><canvas id="logo"
+        ><img id="can_logo" src="" /></canvas
+    ></canvas>
+
+    <div id="editor" class="box1">
+      <form id="reset">
+        <p>Blur</p>
+        <input
+          type="range"
+          id="blur1"
+          class="data"
+          max="10"
+          min="0"
+          value="0"
+          step="0.1"
+          onchange="edit()"
+        />
+        <span id="blu"></span>
+
+        <p>Brightness</p>
+        <input
+          type="range"
+          id="brig"
+          class="data"
+          max="2"
+          min="0"
+          value="1"
+          step="0.01"
+          onchange="edit()"
+        />
+        <span id="bri"></span>
+
+        <p>Contrast</p>
+        <input
+          type="range"
+          id="cont"
+          class="data"
+          max="2"
+          min="0"
+          value="1"
+          step="0.01"
+          onchange="edit()"
+        />
+        <span id="con"></span>
+
+        <p>Saturation</p>
+        <input
+          type="range"
+          id="satu"
+          class="data"
+          max="2"
+          min="0"
+          value="1"
+          step="0.01"
+          onchange="edit()"
+        />
+        <span id="sat"></span>
+
+        <p>DropShadow</p>
+        <input
+          type="range"
+          id="drop"
+          class="data"
+          max="10"
+          min="0"
+          value="0"
+          step="0.1"
+          onchange="edit()"
+        />
+        <span id="dro"></span>
+
+        <p>GreyScale</p>
+        <input
+          type="range"
+          id="grey"
+          class="data"
+          max="1"
+          min="0"
+          value="0"
+          step="0.01"
+          onchange="edit()"
+        />
+        <span id="gre"></span>
+
+        <p>HueRotate</p>
+        <input
+          type="range"
+          id="huer"
+          class="data"
+          max="180"
+          min="-180"
+          value="0"
+          step="1"
+          onchange="edit()"
+        />
+        <span id="hue"></span>
+
+        <p>Invert</p>
+        <input
+          type="range"
+          id="inve"
+          class="data"
+          max="1"
+          min="0"
+          value="0"
+          step="0.01"
+          onchange="edit()"
+        />
+        <span id="inv"></span>
+
+        <p>Sepia</p>
+        <input
+          type="range"
+          id="sepi"
+          class="data"
+          max="1"
+          min="0"
+          value="0"
+          step="0.01"
+          onchange="edit()"
+        />
+        <span id="sep"></span>
+
+        <p>Opacity</p>
+        <input
+          type="range"
+          id="opac"
+          class="data"
+          max="1"
+          min="0"
+          value="1"
+          step="0.01"
+          onchange="edit()"
+        />
+        <span id="opa"></span>
+      </form>
+    </div>
+
+    <footer>&copy;2021 Hussain</footer>
+  </body>
+</html>
